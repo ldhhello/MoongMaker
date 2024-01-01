@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" id="myfile" onchange="load_file()">
+    <button id="initialize-button">적용</button>
+
+    <br>
+
+    
+
+    <textarea id="score-text" rows="30" cols="55"></textarea>
+
+    <br>
+
+    빠르기 (BPM) : <input type="number" id="bpm" value="120">
+    음 높낮이 조절 : <input type="number" id="pitch" value="0">
+
+    <br>
+
+    <button id="create-wav">생성</button>
+
+    <br>
+
+    <button id="download-button">다운로드</button>
+
+    <audio controls="controls" id="audio">
+        Your browser does not support the &lt;audio&gt; tag. 
+        <source id="source" src="" type="audio/wav" />
+    </audio>
+
+    <script src="wasm.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
