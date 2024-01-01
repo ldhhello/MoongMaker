@@ -88,7 +88,7 @@ download_button.onclick = () => {
     offerFileAsDownload('output.wav', 'music/wav');
 }
 
-fetch(`/moving.wav`, {method: 'GET'})
+fetch(`moving.wav`, {method: 'GET'})
 .then(response => response.blob())
 .then(body => body.arrayBuffer())
 .then(buffer => {
